@@ -1,0 +1,59 @@
+name: Bug report
+description: Something in Nulltrack isn't working right
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please search
+        [existing issues](https://github.com/nulltrack/issues-feedback/issues?q=is%3Aissue+label%3Abug)
+        first — if it's already reported, add a 👍 there instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: I tapped ... and expected ... but instead ...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If you can make it happen again, list the steps.
+      placeholder: |
+        1. Open a song with ...
+        2. Tap ...
+        3. ...
+    validations:
+      required: false
+  - type: input
+    id: device
+    attributes:
+      label: iPhone model
+      placeholder: e.g. iPhone 15 Pro
+    validations:
+      required: true
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS version
+      description: Settings → General → About → iOS Version
+      placeholder: e.g. 19.5
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Nulltrack version
+      description: Shown on the App Store page under "What's New", e.g. 1.0.0
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Headphones/audio interface in use, AUv3 plugins loaded, screenshots or screen recordings — anything that might help.
+    validations:
+      required: false
